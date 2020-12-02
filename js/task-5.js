@@ -37,8 +37,7 @@ if (country === null) {
       cost = 80;
       countryDelivery = 'Индию';
       break;
-    }
-      
+    }      
   
     case 'ямайка': {
       delivery = true;
