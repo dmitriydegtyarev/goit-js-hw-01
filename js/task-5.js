@@ -1,14 +1,15 @@
 let cost = 0;
 let countryDelivery = '';
 let country = '';
-
+let delivery;
 
 country = prompt('Укажите страну доставки');
-// country = country.toLowerCase();
 
 if (country === null) {
   alert('"Отменено пользователем!"');
-} else {
+} else if (country !== null) {
+  country = country.toLowerCase();
+} 
   switch (country) {
   case 'китай':
     cost = 100;
@@ -35,10 +36,13 @@ if (country === null) {
     countryDelivery = 'Ямайку';
     break;
   
-  default:
+    default:
       alert('"Доставка в Вашу страну не осуществляется!"');
-  }
+      delivery = false;
+  }   
+
+if (delivery !== false && country !== null) {
   alert(`Доставка в ${countryDelivery} будет стоить ${cost} кредитов`);
-} 
+}
 
 console.log(country);
