@@ -1,7 +1,7 @@
 let cost = 0;
 let countryDelivery = '';
 let country = '';
-let delivery = false;
+let delivery;
 
 country = prompt('Укажите страну доставки');
 
@@ -11,41 +11,48 @@ if (country === null) {
   country = country.toLowerCase();
 } 
   switch (country) {
-    case 'китай':
+    case 'китай': {
       delivery = true;
       cost = 100;
       countryDelivery = 'Китай';
-    break;
+      break;
+    }      
   
-    case 'чили':
+    case 'чили': {
       delivery = true;
       cost = 250;
       countryDelivery = 'Чили';
-    break;
+      break;
+    }      
   
-    case 'австралия':
+    case 'австралия': {
       delivery = true;
       cost = 170;
       countryDelivery = 'Австралию';
-    break;
+      break;
+    }      
   
-    case 'индия':
+    case 'индия': {
       delivery = true;
       cost = 80;
       countryDelivery = 'Индию';
-    break;
+      break;
+    }
+      
   
-    case 'ямайка':
+    case 'ямайка': {
       delivery = true;
       cost = 120;
       countryDelivery = 'Ямайку';
-    break;    
+      break; 
+    }         
   }   
 
-if (delivery !== false && country !== null) {
+if (delivery !== undefined && country !== null) {
   alert(`Доставка в ${countryDelivery} будет стоить ${cost} кредитов`);
-} else if (delivery !== true && country !== null) {
+} else if (delivery === undefined && country !== null) {
   alert('"Доставка в Вашу страну не осуществляется!"'); 
 }
 
 console.log(country);
+console.log(delivery);
