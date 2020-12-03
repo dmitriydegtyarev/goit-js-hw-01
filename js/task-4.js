@@ -12,7 +12,7 @@ totalPrice = credits - (order * pricePerDroid);
 
 if (order === null) {
   console.log('"Отменено пользователем!"');  
-} else if (order == 0) {
+} else if (order <= 0) {
   // Задача в условии не стояла этой проверки, но логично было сделать эту проверку;
   console.log('Вы указали недопустимое значение, укажите количество дроидов от 1 шт и выше!');
 } else if (order * pricePerDroid > credits) {
