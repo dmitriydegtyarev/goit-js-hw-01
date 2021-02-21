@@ -2,7 +2,7 @@ let total = 0;
 let input = 0;
 
 while (true) {
-  let input = prompt('Введите число');
+  input = prompt('Введите число');
 
   if (input === null) {
     alert('Отменено пользователем');
